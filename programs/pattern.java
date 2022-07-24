@@ -7,7 +7,7 @@ class pattern{
         int rows = sc.nextInt();
         // System.out.println("Enter Number of columns");
         // int col = sc.nextInt();
-        Pattern6(rows);
+        Pattern9(rows);
     }
 
     static void Pattern1(int rows, int col){
@@ -74,6 +74,44 @@ class pattern{
         for(int i = 1; i<=n; i++){
             for(int j = 1; j<=i; j++){
                 System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern7(int rows){
+        int n = rows;
+        for(int i = n; i>=1; i--){
+            for(int j = 1; j<=i; j++){
+                System.out.print(j); 
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern8(int rows){
+        int n = rows;
+        int a = 1;
+        for(int i = 1; i<=n; i++){
+            for(int j = 1; j<=i; j++){
+                System.out.print(a+" ");
+                a++;
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern9(int rows){
+        int n = rows;
+        for(int i = 1; i<=n; i++){
+            for(int j = 1; j<=i; j++){
+                int sum = i+j;
+                if(sum % 2 == 0){
+                    System.out.print("1 ");    
+                }
+                else{
+                    System.out.print("0 ");
+                }
             }
             System.out.println();
         }
