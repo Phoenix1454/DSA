@@ -7,7 +7,7 @@ class pattern{
         int rows = sc.nextInt();
         // System.out.println("Enter Number of columns");
         // int col = sc.nextInt();
-        Pattern9(rows);
+        Pattern12(rows);
     }
 
     static void Pattern1(int rows, int col){
@@ -112,6 +112,70 @@ class pattern{
                 else{
                     System.out.print("0 ");
                 }
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern10(int rows){
+        int n = rows;
+        for(int i = 1; i<=n; i++){
+            //upper half
+            for(int j = 1; j<=i; j++){
+                System.out.print("*");
+            }
+            //spaces
+            int spaces = 2 * (n-i);
+            for(int j = 1; j<=spaces; j++){
+                System.out.print(" ");
+            }
+            //2nd part
+            for(int j = 1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //lower half
+        for(int i = n; i>=1; i--){
+            //upper half
+            for(int j = 1; j<=i; j++){
+                System.out.print("*");
+            }
+            //spaces
+            int spaces = 2 * (n-i);
+            for(int j = 1; j<=spaces; j++){
+                System.out.print(" ");
+            }
+            //2nd part
+            for(int j = 1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern11(int rows){
+        int n = rows;
+        for(int i = 1; i<=n; i++){
+            //spaces
+            for(int j = 0; j<(n-i); j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern12(int rows){
+        int n = rows;
+        for(int i = 0; i<rows; i++){
+            for(int j = 1; j<n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=i; j++){
+                System.out.print(i+" ");
             }
             System.out.println();
         }
