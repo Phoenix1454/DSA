@@ -7,7 +7,7 @@ class pattern{
         int rows = sc.nextInt();
         // System.out.println("Enter Number of columns");
         // int col = sc.nextInt();
-        Pattern12(rows);
+        Pattern14(rows);
     }
 
     static void Pattern1(int rows, int col){
@@ -170,13 +170,53 @@ class pattern{
 
     static void Pattern12(int rows){
         int n = rows;
-        for(int i = 0; i<rows; i++){
-            for(int j = 1; j<n-i; j++){
+        for(int i = 1; i<=rows; i++){
+            for(int j = 1; j<=n-i; j++){
                 System.out.print(" ");
             }
             for(int j = 1; j<=i; j++){
                 System.out.print(i+" ");
             }
+            System.out.println();
+        }
+    }
+
+    static void Pattern13(int rows){
+        int n = rows;
+        for(int i = 1; i<=rows; i++){
+            for(int j = 1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = i; j>=1; j--){
+                System.out.print(j);
+            }
+            for(int j = 2; j<=i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+    static void Pattern14(int rows){
+        int n = rows;
+        for(int i = 1; i<=rows; i++){
+            for(int j = 1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+        for(int i = n; i>=1; i--){
+            for(int j = 1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=2*i-1; j++){
+                System.out.print("*");
+            }
+
             System.out.println();
         }
     }
